@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const submit = document.getElementById("submit");
 	const likes = document.getElementsByClassName("likes")[0];
 
-	minus.addEventListener("click", decrement);
-	plus.addEventListener("click", increment);
 
 	commentForm.addEventListener("submit", function (event) {
 		let comment = document.createElement("p");
@@ -31,10 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
+	plus.addEventListener("click", increment);
 	function increment() {
 		counter.innerHTML++;
 	}
 
+	minus.addEventListener("click", decrement);
 	function decrement() {
 		counter.innerHTML--;
 	}
