@@ -62,12 +62,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
+
 	heart.addEventListener("click", likeButtonClicked);
 	function likeButtonClicked() {
 		let like = document.createElement("li");
-		like.innerText = counter.innerHTML + " was liked";
-
-		likes.append(like);
+		like.innerText = counter.innerHTML;
+    let cool = "yay";
+    if (likes.innerText.includes(counter.innerHTML)) {
+      let a = counter.innerHTML
+      let regex = new RegExp( a, 'g' );
+      appear = 1;
+      appear += (likes.innerText.match(regex) || []).length;
+      like.innerText = counter.innerHTML + " was liked " + appear + " times";
+      likes.append(like);
+    } else {
+      like.innerText = counter.innerHTML + " was liked 1 time";
+		  likes.append(like);
+    }
 	}
 
 	startInterval;
