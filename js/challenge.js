@@ -66,8 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	heart.addEventListener("click", likeButtonClicked);
 	function likeButtonClicked() {
 		let like = document.createElement("li");
-		like.innerText = counter.innerHTML;
-    let cool = "yay";
     if (likes.innerText.includes(counter.innerHTML)) {
       let a = counter.innerHTML
       let regex = new RegExp( a, 'g' );
