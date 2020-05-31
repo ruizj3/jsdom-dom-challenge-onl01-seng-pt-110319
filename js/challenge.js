@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	minus.addEventListener("click", decrement);
 	plus.addEventListener("click", increment);
-	pause.addEventListener("click", pauseButtonClicked);
-	heart.addEventListener("click", likeButtonClicked);
 
 	commentForm.addEventListener("submit", function (event) {
 		let comment = document.createElement("p");
@@ -41,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		counter.innerHTML--;
 	}
 
+	pause.addEventListener("click", pauseButtonClicked);
 	function pauseButtonClicked() {
 		if (pause.innerText == "pause") {
 			pause.innerText = "resume";
@@ -63,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 
+	heart.addEventListener("click", likeButtonClicked);
 	function likeButtonClicked() {
 		let like = document.createElement("li");
 		like.innerText = counter.innerHTML + " was liked";
